@@ -41,7 +41,7 @@ def rounds(number_list):
         except ValueError as error:
             show_error(error, None, number_list)
             continue
-        if number_of_rounds < 0 or number_of_rounds > 3:
+        if number_of_rounds <= 0 or number_of_rounds > 3:
             message = "The lowest number you can enter is 1\n\tThe highest number you can enter is 3\n"
             show_error(None, message,  number_list)
             continue
@@ -74,11 +74,11 @@ def computer_choice_of_numbers(number_list):
 
 
 def verify_user_input(user_input, ):
-    if user_input == 0 or user_input == 21:
-        #LOSING DUE TO user_input==21 OR user_input==0
+    if user_input == 21:
+        #LOSING DUE TO user_input==21
         return False
-    elif user_input < 0 or user_input > 21:
-        # LOSING DUE TO user_input<0 or user_input>21
+    elif user_input <= 0 or user_input > 21:
+        # LOSING DUE TO user_input<=0 or user_input>21
         return False
     return True
 
